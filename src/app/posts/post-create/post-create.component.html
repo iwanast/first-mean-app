@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-form-field>
+    <input matInput type="text" placeholder="title" [(ngModel)]="enteredTitle">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea
+      matInput
+      rows="6"
+      placeholder="content"
+      [value]="'Your new postInput'"
+      [(ngModel)]="enteredContent"
+      #postInput
+    ></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="accent" (click)="onAddPost()">
+    Save Post
+  </button>
+  <!--core template binding features from Angular: event binding -->
+</mat-card>
+<!--core template binding features from Angular: property binding example: [value]="'Your new postInput'" with single and doubbel quotation marks to get a normal string  -->
+<!--core template binding features from Angular: two-way binding: example: [(ngModel)]="enteredValue"-->
+
+<!-- <p>{{newPost}}</p>
+  core template binding features from Angular: string interpolation -->
