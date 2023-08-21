@@ -1,6 +1,5 @@
 <app-header></app-header>
 <main>
-  <app-post-create (postCreated)="onPostAdded($event)"></app-post-create> 
-  <!-- when a post is created in post-create then we activate the function onPostAdded from the parent -->
-  <post-list [posts]="storedPosts"></post-list> <!--[posts]: [] is used for binding-->
+  <app-post-create></app-post-create>
+  <post-list></post-list>
 </main>

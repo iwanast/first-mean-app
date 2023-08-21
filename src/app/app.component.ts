@@ -1,6 +1,4 @@
-import { Component, Input } from '@angular/core';
-
-import { Post } from './posts/post.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +7,4 @@ import { Post } from './posts/post.model';
 })
 export class AppComponent {
   title = 'mean-course';
-  storedPosts: Post[] = [];
-  onPostAdded(post: Post) {
-    this.storedPosts.push(post);
-  }
 }
