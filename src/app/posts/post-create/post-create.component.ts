@@ -20,7 +20,11 @@ export class PostCreateComponent {
     if (form.invalid) {
       return;
     }
-    this.postsService.addPost(form.value.title, form.value.content);
-    form.reset(); 
+    this.postsService.addPost(form.value.title, form.value.content, this.randomNumber());
+    form.resetForm(); 
+  }
+
+  randomNumber(): number{
+    return Math.floor(Math.random() * 10000000 + 10000000)
   }
 }

@@ -16,8 +16,14 @@ export class PostsService {
     return this.postsUpdated.asObservable(); /* returns an object which we can listen to but which we can't emit */
   }
 
-  addPost(title: string, content: string) {
-    this.posts.push({title: title, content: content});
+  addPost(title: string, content: string, id: number) {
+    console.log("id: ", id)
+    this.posts.push({title: title, content: content, id: id});
     this.postsUpdated.next([...this.posts]) /*this pushes the new posts (with next) */
+  }
+
+  deletePost(postId: number){
+    this.posts = this.posts.filter(post => post.id !== postId)
+    this.postsUpdated.next([...this.posts]) 
   }
 }
